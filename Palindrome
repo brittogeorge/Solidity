@@ -1,0 +1,26 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.8.3;
+
+contract Palindrome {
+    string public output;
+    
+    function palindrome(uint num) public {
+      
+        uint reversed = 0;
+        uint remainder;
+        uint original = num;
+
+        while (num != 0) {
+            remainder = num % 10;
+            reversed = reversed * 10 + remainder;
+            num /= 10;
+        }
+        if (original == reversed) {
+            output="numner is a palindrome"; // It is in palindrome
+        } 
+        else {
+            output="number is not a palindrome";
+
+        }
+        }
+    }
