@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.8.3;
+
+contract SearchElement{
+    uint256[] private  array;
+    string public b;
+    function add(uint element) public{
+        array.push(element); // placing the element into the array
+    }
+    function print() public view returns(uint[] memory){
+        return array;
+    }
+    function search(uint element) public{
+        for (uint i=0;i<array.length;i++) // i=array index value 
+        if (array[i]==element){
+            b="The element is found";
+            }
+            else {
+                b="The element is not found";
+            }
+
+    }
+ }
